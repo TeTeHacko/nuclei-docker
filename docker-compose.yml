@@ -3,7 +3,7 @@ services:
   nuclei:
     image: "projectdiscovery/nuclei:latest"
     volumes:
-      - "$HOME/nuclei-templates:/app/nuclei-templates"
+      - "./nuclei-templates/:/app/nuclei-templates"
       - "./scan.sh:/scan.sh"
       - "./urls.txt:/urls.txt"
     network_mode: host
