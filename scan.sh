@@ -1,4 +1,6 @@
 #!/bin/sh
 
-/app/nuclei -update-templates
-/app/nuclei -t /app/nuclei-templates -l /urls.txt
+echo 192.168.1.0/24 | httpx > /urls.txt
+
+nuclei -update-templates
+nuclei -t /app/nuclei-templates -l /urls.txt
